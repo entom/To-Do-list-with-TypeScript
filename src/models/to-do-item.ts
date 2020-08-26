@@ -3,10 +3,12 @@ import {Category} from "./category";
 export class ToDoItem {
     private _title: string;
     private _category: Category;
+    private _createdAt: Date | null = null;
 
     constructor(title: string, category: Category) {
         this._title = title;
         this._category = category;
+        this._createdAt = new Date();
     }
 
     get title(): string {
@@ -23,5 +25,9 @@ export class ToDoItem {
 
     set category(value: Category) {
         this._category = value;
+    }
+
+    get createdAt(): Date | null {
+        return this._createdAt;
     }
 }

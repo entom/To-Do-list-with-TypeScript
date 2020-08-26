@@ -25,3 +25,7 @@ console.log('to-do-items', toDoList.getCounter());
 console.log(`items in category 1: ${toDoList.findByCategory(categories[0]).length}`)
 console.log(`items in category 2: ${toDoList.findByCategory(categories[1]).length}`)
 console.log(`items in category 3: ${toDoList.findByCategory(categories[2]).length}`)
+
+toDoList.items.forEach(item => {
+    console.log(`item date; ${item.createdAt}`)
+});
