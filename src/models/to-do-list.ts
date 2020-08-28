@@ -19,4 +19,8 @@ export class ToDoList {
     findByCategory(category: Category): Array<ToDoItem> {
         return this._items.filter(item => item.category === category);
     }
+
+    findOpened(): Array<ToDoItem> {
+        return this._items.filter(item => item.state === 'opened');
+    }
 }

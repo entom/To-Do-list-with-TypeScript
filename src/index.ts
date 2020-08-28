@@ -29,3 +29,10 @@ console.log(`items in category 3: ${toDoList.findByCategory(categories[2]).lengt
 toDoList.items.forEach(item => {
     console.log(`item date; ${item.createdAt}`)
 });
+
+console.log(`opened items: ${toDoList.findOpened().length}`);
+
+toDoList.items[1].state = 'closed';
+toDoList.items[2].state = 'closed';
+
+console.log(`opened items: ${toDoList.findOpened().length}`);
