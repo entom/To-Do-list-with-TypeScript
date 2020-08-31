@@ -23,4 +23,8 @@ export class ToDoList {
     findOpened(): Array<ToDoItem> {
         return this._items.filter(item => item.state === 'opened');
     }
+
+    clear() {
+        this._items = [];
+    }
 }

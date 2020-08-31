@@ -30,4 +30,9 @@ describe('To Do List', () => {
         expect(list.findByCategory(category1)).to.have.lengthOf(2);
     });
 
+    it('should be empty after clear', () => {
+        list.clear()
+        expect(list.items).to.have.lengthOf(0);
+    });
+
 });
